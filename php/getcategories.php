@@ -1,8 +1,5 @@
 <?php
-	$host = 'localhost';
-	$database = 'wainot_rs';
-	$user = 'root';
-	$password = '';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/php/db.php';
 	
 	$link = mysqli_connect($host,$user,$password,$database) or die(mysqli_error($link));
 	

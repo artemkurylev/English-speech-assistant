@@ -1,8 +1,5 @@
 <?php
-	$host = 'localhost';
-	$database = 'wainot_rs';
-	$user = 'root';
-	$password = '';
+	require_once $_SERVER['DOCUMENT_ROOT'].'/php/db.php';
 	
 	$category = $_GET['category'];
 	
