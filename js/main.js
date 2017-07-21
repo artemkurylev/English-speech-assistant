@@ -8,7 +8,7 @@
  $("#picto-grid").append($(pictogram).clone());
  }*/
 var current_language = "en-GB";
-$("#picto-grid").load("php/getcategories.php");
+//$("#picto-grid").load("php/getcategories.php");
 
 //озвучка пиктограмм
 var synth = window.speechSynthesis;

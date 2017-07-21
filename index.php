@@ -48,7 +48,11 @@
                         </div>
                     </div>
                     <div class="row keyboard-panel">
-                        <div class="col-sm-10 col-xs-6" id="picto-grid"></div>
+                        <div class="col-sm-10 col-xs-6" id="picto-grid">
+                            <?php
+                                require 'php/getcategories.php';
+                            ?>
+                        </div>
                         <div class="col-sm-2 col-xs-6" id="control-buttons">
                             <div id="delete">
                                 <img src="img/delete.gif" alt="delete">
