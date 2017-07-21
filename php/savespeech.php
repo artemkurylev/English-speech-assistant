@@ -16,14 +16,16 @@
         }
 	$name = $_POST['name'];
         $file = $speech_id . '.txt';
-	$speech = $_POST['speech'];
+	$speech = $_POST['speech_text'];
         
         $query = "UPDATE speech SET name='$name',file='$file' WHERE id=$speech_id";
         mysqli_query($link,$query);
         
-	$fd = fopen("speeches/" . $file,"w");
+	$fd = fopen($_SERVER['DOCUMENT_ROOT']."/speeches/" . $file,"w") or die ('can not create file');
+        print_r($speech);
 	fwrite($fd,$speech);
-	fclose($fp);
+        
+	fclose($fd);
         
 	mysqli_close($link);
 ?>

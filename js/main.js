@@ -83,10 +83,6 @@ $("#input-field").click(function (event) {
     }
 });
 
-function serializeSpeech(speech) {
-    return "";
-}
-
 //сохранение речи
 $("#save").click(function () {
     //serialize speech
@@ -94,7 +90,7 @@ $("#save").click(function () {
     if (speech_id >= 0) {
         speech['speech_id'] = speech_id;
     }
-    var speech = [];
+    var speech_text = [];
     $("#input-field .pictogram").each(function () {
         var pictogram = $(this);
         var picto_object = {};
@@ -103,13 +99,15 @@ $("#save").click(function () {
         picto_object['en-GB'] = pictogram.attr('data-en-GB');
         picto_object['audible-nl-NL'] = pictogram.attr('data-audible-nl-NL');
         picto_object['audible-en-GB'] = pictogram.attr('data-audible-en-GB');
-        speech.push(picto_object);
+        speech_text.push(picto_object);
     });
     var name = [];
-    for (var i = 0; i < Math.min(6, speech.length); i++) {
-        name.puch(speech[i]['id']);
+    for (var i = 0; i < Math.min(6, speech_text.length); i++) {
+        name.push(speech_text[i]['id']);
     }
-    speech_string = serializeSpeech();
+    
+    speech['name'] = JSON.stringify(name);
+    speech['speech_text'] = JSON.stringify(speech_text);
 
     //save speech
     $.post("php/savespeech.php", speech);
