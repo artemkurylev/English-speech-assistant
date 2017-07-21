@@ -80,5 +80,20 @@
         <script src="js/bootstrap.min.js"></script>
         <!-- основной код -->
         <script src="js/main.js"></script>
+
+        <?php
+            if($speech_id>0){
+                $link = mysqli_connect($host,$user,$password,$database) or die(mysqli_error($link));
+                $query = "SELECT * FROM speech WHERE id=$speech_id";
+                $result = mysqli_query($link,$query) or die(mysqli_error($link));
+                $row = mysqli_fetch_row($result);
+                $filename = 'speeches/' . $row[3];
+
+                $speech_str = file_get_contents($filename);
+
+                echo "<script>var speech_str = $speech_str</script>";
+                echo "<script src=\"js/loadspeech.js\"></script>";
+            }
+        ?>
     </body>
 </html>

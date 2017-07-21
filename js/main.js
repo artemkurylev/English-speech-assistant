@@ -99,6 +99,7 @@ $("#save").click(function () {
         picto_object['en-GB'] = pictogram.attr('data-en-GB');
         picto_object['audible-nl-NL'] = pictogram.attr('data-audible-nl-NL');
         picto_object['audible-en-GB'] = pictogram.attr('data-audible-en-GB');
+        picto_object['img'] = pictogram.children("img").first().attr('src');
         speech_text.push(picto_object);
     });
     var name = [];
