@@ -101,3 +101,28 @@ body {
     height: 100px;
     width: 100px;
 }
+
+.speech-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.speech {
+    display: inline-block;
+    padding: 5px;
+    border: 1px;
+    border-style: solid;
+    border-color: blue;
+    vertical-align: top;
+}
+
+.delete {
+    margin-left: 100px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.delete img {
+    width: 100px;
+    height: 100px;
+}

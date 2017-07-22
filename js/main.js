@@ -107,7 +107,7 @@ $("#save").click(function () {
         name.push(speech_text[i]['id']);
     }
     
-    speech['name'] = JSON.stringify(name);
+    speech['name'] = JSON.stringify(name).slice(1,-1);
     speech['speech_text'] = JSON.stringify(speech_text);
 
     //save speech

@@ -37,7 +37,9 @@
                         </div>
                         <br/>
                         <div id="speeches">
-                            <img src="img/speeches.svg" alt="speeches">
+                            <a href="speechlist.php">
+                                <img src="img/speeches.svg" alt="speeches">
+                            </a>
                         </div>
                     </div>
                 </div>
