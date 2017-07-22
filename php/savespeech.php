@@ -25,4 +25,6 @@
 	fclose($fd);
         
 	mysqli_close($link);
+        
+        echo "speech_id>>>$speech_id";
 ?>

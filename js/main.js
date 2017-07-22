@@ -111,6 +111,8 @@ $("#save").click(function () {
     speech['speech_text'] = JSON.stringify(speech_text);
 
     //save speech
-    $.post("php/savespeech.php", speech);
+    $.post("php/savespeech.php", speech, function(result){
+        speech_id = result.slice(result.indexOf('>>>')+3);
+    });
 });
 
