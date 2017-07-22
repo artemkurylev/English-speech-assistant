@@ -40,6 +40,12 @@
                 }
                 mysqli_close($link);
             ?>
+            
+            <div id="create">
+                <a href="index.php">
+                <img src="img/create.png">
+                </a>
+            </div>
         </div>
         
         <!-- jQuery -->

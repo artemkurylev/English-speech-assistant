@@ -126,3 +126,14 @@ body {
     width: 100px;
     height: 100px;
 }
+
+#create {
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+}
+
+#create img {
+    width: 150px;
+    height: 150px;
+}
