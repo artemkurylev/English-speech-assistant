@@ -38,7 +38,14 @@
                     echo '<div class="delete"> <img src="img/delete.svg"> </div>';
                     echo "</div>";
                 }
+                mysqli_close($link);
             ?>
         </div>
+        
+        <!-- jQuery -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/speechlist.js"></script>
     </body>
 </html>
