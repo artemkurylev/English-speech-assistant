@@ -25,6 +25,7 @@
                 while($row = mysqli_fetch_row($result)){
                     echo '<div class="speech-row">';
                     echo "<div class=\"speech\" data-speech=\"$row[0]\">";
+                    echo "<a href=\"index.php?speech_id=$row[0]\">";
                     $pictos = split(',',$row[1]);
                     foreach ($pictos as $pic) {
                         $res = mysqli_query($link,"SELECT img FROM pictogram WHERE id=$pic");
@@ -32,6 +33,7 @@
                         //print_r(mysqli_fetch_row($res)[0]);
                         echo "<div class=\"pictogram\"><img src=\"$img\"></div>";
                     }
+                    echo '</a>';
                     echo '</div>';
                     echo '<div class="delete"> <img src="img/delete.svg"> </div>';
                     echo "</div>";
