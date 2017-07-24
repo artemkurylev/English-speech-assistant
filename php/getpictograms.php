@@ -15,7 +15,7 @@
                             <img src="dutch/<?=$row[3]?>" alt="<?=$row[2]?>">
                             <p><?=$row[2]?></p>
                         </div>
-		<?endwhile;
+		<?php endwhile;
 	}
 	mysqli_close($link);
 ?>
