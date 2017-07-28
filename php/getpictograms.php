@@ -9,13 +9,12 @@
 	$result = mysqli_query($link,$query) or die(mysqli_error($link));
 	
 	if($result){
-		while ($row = mysqli_fetch_row($result)):?>
-			<div class="pictogram" data-pic-id="<?=$row[0]?>" data-nl-NL="<?=$row[1]?>" 
+		while ($row = mysqli_fetch_row($result)):?><div class="pictogram"
+                        data-pic-id="<?=$row[0]?>" data-nl-NL="<?=$row[1]?>" 
                         data-en-GB="<?=$row[2]?>" data-audible-nl-NL="<?=$row[1]?>" data-audible-en-GB="<?=$row[2]?>">
                             <img src="dutch/<?=$row[3]?>" alt="<?=$row[2]?>">
                             <p><?=$row[2]?></p>
-                        </div>
-		<?php endwhile;
+                        </div><?php endwhile;
 	}
 	mysqli_close($link);
 ?>
